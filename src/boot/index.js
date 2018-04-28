@@ -1,6 +1,6 @@
 // @flow
-import app from "./setup";
+import app from './setup'
 
 export default function() {
-	return app;
+  return app
 }
