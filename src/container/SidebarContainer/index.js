@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import Sidebar from '../../stories/screens/Sidebar'
+import Sidebar from '../../components/Sidebar'
 export interface Props {
   navigation: any;
 }

@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import BlankPage from '../../stories/screens/BlankPage'
+import BlankPage from '../../components/BlankPage'
 export interface Props {
   navigation: any;
 }

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { Item, Input, Icon, Toast, Form } from 'native-base'
 import { Field, reduxForm } from 'redux-form'
-import Login from '../../stories/screens/Login'
+import Login from '../../components/Login'
 
 const required = value => (value ? undefined : 'Required')
 const maxLength = max => value =>
@@ -24,6 +24,7 @@ export interface Props {
   navigation: any;
 }
 export interface State {}
+
 class LoginForm extends React.Component<Props, State> {
   textInput: any
 
@@ -78,6 +79,7 @@ class LoginForm extends React.Component<Props, State> {
     )
   }
 }
+
 const LoginContainer = reduxForm({
   form: 'login',
 })(LoginForm)

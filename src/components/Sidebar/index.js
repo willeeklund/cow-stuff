@@ -11,10 +11,10 @@ const routes = [
     route: 'BlankPage',
     caption: 'Blank Page',
   },
-  {
-    route: 'Login',
-    caption: 'Logout',
-  },
+  // {
+  //   route: 'Login',
+  //   caption: 'Logout',
+  // },
 ]
 
 export interface Props {
