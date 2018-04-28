@@ -6,7 +6,8 @@
     "babel-eslint": "8.1.0",
     "eslint": "4.14.0",
     "eslint-plugin-flowtype": "2.40.1",
-    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "2.4.0",
     "eslint-plugin-react": "7.5.1",
@@ -15,6 +16,7 @@
     "flow-typed": "2.2.3",
     "husky": "0.14.3",
     "jest-expo": "^24.0.0",
+    "prettier-eslint-cli": "^4.7.1",
     "react-native-scripts": "1.8.1",
     "react-test-renderer": "16.2.0"
   },
@@ -25,6 +27,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "yarn jest && flow && eslint .",
+    "format": "prettier-eslint --no-semi --write \"src/**/*.js\"",
     "jest": "node node_modules/jest/bin/jest.js",
     "precommit": "yarn test"
   },

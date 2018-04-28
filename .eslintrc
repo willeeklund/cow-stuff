@@ -11,6 +11,8 @@
 
   "plugins": [
     "flowtype",
+    "jest",
+    "import",
     "prettier",
     "react"
   ],
@@ -61,7 +63,7 @@
 
   // General
 
-    "comma-dangle": 0,               // disallow trailing commas in object literals
+    "comma-dangle": ["error", "always-multiline"], // disallow trailing commas in object literals
     "no-cond-assign": 1,             // disallow assignment in conditional expressions
     "no-console": 1,                 // disallow use of console (off by default in the node environment)
     "no-const-assign": 2,            // disallow assignment to const-declared variables
@@ -170,7 +172,7 @@
 
     "key-spacing": 0,
     "keyword-spacing": 1,            // enforce spacing before and after keywords
-    "jsx-quotes": [1, "prefer-double"],
+    "jsx-quotes": [1, "prefer-single"],
     "comma-spacing": 0,
     "no-multi-spaces": 0,
     "brace-style": 0,                // enforce one true brace style (off by default)
@@ -190,9 +192,9 @@
     "no-trailing-spaces": 1,         // disallow trailing whitespace at the end of lines
     "no-underscore-dangle": 0,       // disallow dangling underscores in identifiers
     "no-mixed-spaces-and-tabs": 1,   // disallow mixed spaces and tabs for indentation
-    "quotes": [1, "double", "avoid-escape"], // specify whether double or single quotes should be used
+    "quotes": [1, "single", "avoid-escape"], // specify whether double or single quotes should be used
     "quote-props": 0,                // require quotes around object literal property names (off by default)
-    "semi": 1,                       // require or disallow use of semicolons instead of ASI
+    "semi": 0,                       // require or disallow use of semicolons instead of ASI
     "sort-vars": 0,                  // sort variables within the same declaration block (off by default)
     "space-in-brackets": 0,          // require or disallow spaces inside brackets (off by default)
     "space-in-parens": 0,            // require or disallow spaces inside parentheses (off by default)
@@ -217,6 +219,7 @@
 
     "react/display-name": 0,
     "react/jsx-boolean-value": 0,
+    "react/jsx-filename-extension": 0,
     "react/jsx-no-comment-textnodes": 1,
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-no-undef": 1,
@@ -231,6 +234,14 @@
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
-    "react/wrap-multilines": 0
+    "react/wrap-multilines": 0,
+
+  // Import Plugin
+  // The following rules are made available via `eslint-plugin-import`.
+
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.spec.js"] }
+    ]
   }
 }
