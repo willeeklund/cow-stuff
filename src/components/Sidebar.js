@@ -11,6 +11,10 @@ const routes = [
     route: 'BlankPage',
     caption: 'Blank Page',
   },
+  {
+    route: 'AddItem',
+    caption: 'Lägg till',
+  },
   // {
   //   route: 'Login',
   //   caption: 'Logout',

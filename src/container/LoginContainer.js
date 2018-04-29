@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { Item, Input, Icon, Toast, Form } from 'native-base'
 import { Field, reduxForm } from 'redux-form'
-import Login from '../../components/Login'
+import Login from '../components/Login'
 
 const required = value => (value ? undefined : 'Required')
 const maxLength = max => value =>

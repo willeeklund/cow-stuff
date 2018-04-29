@@ -12,13 +12,8 @@ import {
   Icon,
   Footer,
 } from 'native-base'
-//import styles from "./styles";
-export interface Props {
-  loginForm: any;
-  onLogin: Function;
-}
-export interface State {}
-class Login extends React.Component<Props, State> {
+
+class Login extends React.Component {
   render() {
     return (
       <Container>

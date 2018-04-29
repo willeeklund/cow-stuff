@@ -5,6 +5,7 @@ import { Root } from 'native-base'
 import Login from './container/LoginContainer'
 import Home from './container/HomeContainer'
 import BlankPage from './container/BlankPageContainer'
+import AddItem from './container/AddItem'
 import Sidebar from './container/SidebarContainer'
 
 const Drawer = DrawerNavigator(
@@ -21,6 +22,7 @@ const App = StackNavigator(
   {
     Login: { screen: Login },
     BlankPage: { screen: BlankPage },
+    AddItem: { screen: AddItem },
     Drawer: { screen: Drawer },
   },
   {

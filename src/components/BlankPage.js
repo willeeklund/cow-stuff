@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StyleSheet } from 'react-native'
 import {
   Container,
   Header,
@@ -11,15 +12,17 @@ import {
   Right,
   Body,
 } from 'native-base'
+import { path } from 'ramda'
 
-import styles from './styles'
-export interface Props {
-  navigation: any;
-}
-export interface State {}
-class BlankPage extends React.Component<Props, State> {
+const styles: any = StyleSheet.create({
+  container: {
+    backgroundColor: '#FBFAFA',
+  },
+})
+
+class BlankPage extends React.Component {
   render() {
-    const param = this.props.navigation.state.params
+    const name = path(['navigation', 'state', 'params', 'name'], this.props)
     return (
       <Container style={styles.container}>
         <Header>
@@ -30,18 +33,14 @@ class BlankPage extends React.Component<Props, State> {
           </Left>
 
           <Body style={{ flex: 3 }}>
-            <Title>{param ? param.name.item : 'Blank Page'}</Title>
+            <Title>{name ? name : 'Blank Page'}</Title>
           </Body>
 
           <Right />
         </Header>
 
         <Content padder>
-          <Text>
-            {param !== undefined
-              ? param.name.item
-              : 'Create Something Awesome . . .'}
-          </Text>
+          <Text>{name ? name : 'Create Something Awesome . . .'}</Text>
         </Content>
       </Container>
     )
