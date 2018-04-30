@@ -9,6 +9,7 @@ export type ReduxAction = {
 export type Item = {
   id: string,
   name: string,
+  comment: string,
 }
 
 // Constants
@@ -16,9 +17,9 @@ const ADD_ITEM = 'ADD_ITEM'
 
 const initialState = {
   items: [
-    { id: 'mhads', name: 'Tröja 1' },
-    { id: 'ioas', name: 'Tröja 2' },
-    { id: 'lkasjd', name: 'Byxor 1' },
+    { id: '1', title: 'Tröja 1', comment: '' },
+    { id: '2', title: 'Tröja 2', comment: '' },
+    { id: '3', title: 'Byxor 1', comment: '' },
   ],
   isLoading: false,
 }

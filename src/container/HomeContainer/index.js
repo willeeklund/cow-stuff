@@ -32,7 +32,7 @@ const mapStateToProps = state => ({
   items: state.cowStuff.items,
 })
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     // fetchList: url => dispatch(fetchList(url)),
   }

@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { Image, Platform } from 'react-native'
+import React from 'react'
 import {
   Container,
   Content,
@@ -10,7 +9,6 @@ import {
   Text,
   View,
   Icon,
-  Footer,
 } from 'native-base'
 
 class Login extends React.Component {
@@ -19,12 +17,10 @@ class Login extends React.Component {
       <Container>
         <Header style={{ height: 200 }}>
           <Body style={{ alignItems: 'center' }}>
-            <Icon name='flash' style={{ fontSize: 104 }} />
+            <Icon name='flash' style={{ fontSize: 60 }} />
             <Title>ReactNativeSeed.com</Title>
             <View padder>
-              <Text style={{ color: Platform.OS === 'ios' ? '#000' : '#FFF' }}>
-                Build Something Amazing
-              </Text>
+              <Text style={{ color: '#000' }}>Build Something Amazing</Text>
             </View>
           </Body>
         </Header>
@@ -36,19 +32,6 @@ class Login extends React.Component {
             </Button>
           </View>
         </Content>
-        <Footer style={{ backgroundColor: '#F8F8F8' }}>
-          <View
-            style={{ alignItems: 'center', opacity: 0.5, flexDirection: 'row' }}
-          >
-            <View padder>
-              <Text style={{ color: '#000' }}>Made with love at </Text>
-            </View>
-            <Image
-              source={{ uri: 'https://geekyants.com/images/logo-dark.png' }}
-              style={{ width: 422 / 4, height: 86 / 4 }}
-            />
-          </View>
-        </Footer>
       </Container>
     )
   }

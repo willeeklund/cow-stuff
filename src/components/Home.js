@@ -46,10 +46,10 @@ export default props => {
         <List>
           {items.map((item, i) => (
             <ListItem
-              key={i}
+              key={item.id}
               onPress={() => navigation.navigate('BlankPage', item)}
             >
-              <Text>{item.name}</Text>
+              <Text>{item.title}</Text>
             </ListItem>
           ))}
         </List>
